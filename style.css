@@ -1,0 +1,39 @@
+.carousel {
+    display:grid;
+    grid-template:5fr 1fr 5fr / 1fr 3fr 1fr;
+    position:relative;
+    overflow:hidden;
+    height:200px;
+    width:200px;
+    margin: 36px;
+}
+
+.carousel .next {
+    grid-row:2/3;
+    grid-column: -1/-2;
+}
+
+.carousel .previous {
+    grid-row: 2/3;
+    grid-column:1/2;
+}
+
+.slides {
+    display:grid;
+    grid-template:1fr / repeat(8, 200px);
+    position:absolute;
+    z-index:-1;
+    top:0px;
+    left:0px;
+}
+
+.slide {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:200px;
+    background-color:blue;
+    color:white;
+    font-size:200px;
+}
+
